@@ -1,0 +1,20 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    src:
+      url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@include font(HelveticaNeue, HelveticaNeue-Bold, 700, bold);
+@include font(HelveticaNeue, HelveticaNeue-Medium, 500, medium);
+@include font(HelveticaNeue, HelveticaNeue-Regular, 400, normal);
+@include font(HelveticaNeue, HelveticaNeue-Light, 300, lighter);
+@include font(HelveticaNeue, HelveticaNeue-Thin, 100, thin);
+
+@include font(CoolveticaHv, CoolveticaHv-Regular, 400, normal);
+@include font(Coolvetica, Coolvetica-Regular, 400, normal);
+@include font(Coolvetica, Coolvetica-Bold, 700, bold);

@@ -1,0 +1,12 @@
+include ../mixins/teacher-block.pug
+
+section.sec-teachers.sec-p-y
+  .sec-teachers__title Учителя
+
+  .container-2 
+    .sec-teachers__list 
+      +teacher-block("./img/teach-1.png", "Адам", "Опыт 10 лет", "audio/kama-cut.mp3", "прослушать аудио")
+      +teacher-block("./img/teach-2.png", "Зарема", "Опыт 7 лет", "audio/chtohochu-cut.mp3", "прослушать аудио")
+      +teacher-block("./img/teach-3.png", "Индира", "Опыт 10 лет", "audio/normal-diski-cut.mp3", "прослушать аудио")
+      +teacher-block("./img/teach-4.png", "Арслан", "Опыт 5 лет", "audio/lera-cut.mp3", "прослушать аудио")
+

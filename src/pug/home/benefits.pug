@@ -1,0 +1,18 @@
+mixin lb-item(title, subtitle, img)
+  .sec-benefits__item
+    .sec-benefits__item-header
+      .sec-benefits__item-title!=title
+      .sec-benefits__item-subtitle!=subtitle
+    .sec-benefits__item-img
+      img(src=img, alt="")
+
+.sec-benefits 
+  .container-2
+    .sec-benefits__content
+      .sec-benefits__banner Сертификат по <br/> завершении курса
+
+      .sec-benefits__list
+        +lb-item('2000+', 'учеников <br/> прошли курс', './img/benefits-1.png')
+        +lb-item('100%', 'гарантия или <br/> вернём деньги', './img/benefits-2.png')
+        +lb-item('8+', 'лет опыта работы <br/> в Хасавюрте', './img/benefits-3.png')
+

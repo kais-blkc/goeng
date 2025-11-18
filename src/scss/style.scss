@@ -1,0 +1,19 @@
+// General styles
+@forward "./parts/fonts";
+@forward "./parts/variables";
+@forward "./parts/general";
+@forward "./parts/header";
+@forward "./parts/footer";
+@forward "./mixins/teachers-block";
+
+// Home styles
+@forward "./home/banner";
+@forward "./home/teachers";
+@forward "./home/generate";
+@forward "./home/ftest";
+@forward "./home/tarifs";
+@forward "./home/benefits";
+@forward "./home/listen";
+@forward "./home/fcards";
+@forward "./home/ai-bot";
+@forward "./home/fform";

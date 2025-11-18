@@ -1,0 +1,110 @@
+@use "../parts/variables" as v;
+
+.sec-generate {
+  padding: 20px 0;
+  @media (max-width: v.$screen-md) {
+    padding-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 50px;
+
+    color: #fff;
+    text-align: center;
+    width: 980px;
+    max-width: 100%;
+    height: 480px;
+    border-radius: 60px;
+    box-shadow: 0px 20px 37px
+      color-mix(in srgb, var(--accent-secondary), transparent 59%);
+    background: center / cover no-repeat url("../img/generate-bg.png");
+    background-position: center -220px;
+    z-index: 1;
+    position: relative;
+
+    @media (max-width: v.$screen-lg) {
+      background-position: center;
+    }
+
+    &-title {
+      font-family: "CoolveticaHv", sans-serif;
+      font-size: 96px;
+      text-align: center;
+      line-height: 80%;
+
+      @media (max-width: v.$screen-md) {
+        font-size: 64px;
+      }
+      @media (max-width: 520px) {
+        font-size: 44px;
+      }
+      @media (max-width: 350px) {
+        font-size: 32px;
+      }
+    }
+
+    &-text {
+      font-size: 14px;
+      margin-top: 24px;
+    }
+
+    &-phrases {
+      position: absolute;
+      width: 90%;
+      height: 100%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      top: 45px;
+      @media (max-width: v.$screen-md) {
+        top: 35px;
+        gap: 175px;
+      }
+
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 14px;
+        @media (max-width: v.$screen-md) {
+          text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+        }
+
+        &:nth-child(1) {
+          max-width: 750px;
+        }
+        &:nth-child(2) {
+          max-width: 930px;
+        }
+        &:nth-child(3) {
+          max-width: 840px;
+        }
+        span.fsz-24 {
+          font-size: 24px;
+          @media (max-width: v.$screen-md) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: -25px;
+    z-index: 5;
+  }
+}

@@ -1,0 +1,41 @@
+@use "../parts/variables" as v;
+
+.sec-fcards {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  text-align: center;
+
+  @media (max-width: v.$screen-md) {
+    padding-top: 40px;
+  }
+  @media (max-width: 500px) {
+    padding-top: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 34px;
+    line-height: 100%;
+    @media (max-width: 500px) {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    max-width: 440px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  &__btn {
+    font-size: 20px;
+    margin-top: 15px;
+    width: 174px;
+  }
+}

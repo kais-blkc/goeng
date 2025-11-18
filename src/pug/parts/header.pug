@@ -1,0 +1,47 @@
+header.header
+  .container
+    .header__content
+
+      a.header__logo.df.gap-5.d-none-min-tablet(href="#")
+        img(src="./img/logo-home.svg")
+        span GoEng
+
+      button.burger.d-none-min-tablet(data-modal-open="header-mobile" aria-label="Открыть меню")
+        span
+        span
+        span
+
+      .header__navbar.d-none-max-tablet
+        a.header__logo.df.gap-5(href="#")
+          img(src="./img/logo-home.svg")
+          span GoEng
+
+        a.header__link(href="#") Тест на уровень
+        a.header__link(href="#") Преподаватели
+        a.header__link(href="#") Тарифы
+        a.header__link(href="#") Бесплатно
+        a.header__link(href="#") Учителям
+        a.header__sign(href="#").df.gap-5
+          .header__sign-icon
+          span Войти
+
+
+
+  .header-mobile(data-modal-block="header-mobile")
+    .header-mobile__content
+      .x-btn(data-modal-close="header-mobile")
+
+      .header-mobile__navbar 
+        a.header__logo.df.gap-5(href="#")
+          img(src="./img/logo-home.svg")
+          span GoEng
+
+        a.header__link(href="#") Тест на уровень
+        a.header__link(href="#") Преподаватели
+        a.header__link(href="#") Тарифы
+        a.header__link(href="#") Бесплатно
+        a.header__link(href="#") Учителям
+        a.header__sign(href="#").df.gap-5
+          .header__sign-icon
+          span Войти
+

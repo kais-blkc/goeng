@@ -1,0 +1,114 @@
+@use "../parts/variables" as v;
+
+.sec-fform {
+  text-align: center;
+  position: relative;
+  padding-bottom: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: v.$screen-md) {
+    &::before {
+      top: -15%;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 540px;
+    height: 590px;
+    background: #ffd6d6;
+    border-radius: 66px;
+    filter: blur(100px);
+    position: absolute;
+    top: -30%;
+    z-index: 1;
+  }
+
+  .container-2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-size: 38px;
+    @media (max-width: v.$screen-md) {
+      font-size: 26px;
+    }
+  }
+
+  &__form {
+    width: 360px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 32px 24px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 44px;
+    position: relative;
+    @media (max-width: v.$screen-md) {
+      &::before {
+        left: 95px;
+        top: 80%;
+        transform: rotate(-90deg);
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 125px;
+      height: 220px;
+      background: center / contain no-repeat url("../img/fform-before.png");
+      position: absolute;
+      left: -105px;
+      top: 50px;
+    }
+
+    input {
+      width: 100%;
+      max-width: 276px;
+      padding: 20px 10px;
+      border: 1px solid #ffbcbc;
+      border-radius: 10px;
+      font-size: 20px;
+      border-radius: 16px;
+      background: #fffdfd;
+      text-align: center;
+      margin-bottom: 10px;
+      outline: none;
+      transition: var(--trans-03s);
+      &::placeholder {
+        color: #e2cccc;
+      }
+      &:focus {
+        border-color: var(--accent);
+      }
+    }
+  }
+
+  &__agree {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #a08e8e;
+
+    &:last-of-type {
+      margin-top: 3px;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__btn {
+    margin-top: 26px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+mixin l-item(title, img, videoLink)
+  a.sec-listen__item(href=videoLink, data-fancybox="listen")
+    .sec-listen__item-img.img-cover
+      img(src=img, alt="")
+    .sec-listen__item-title!=title
+
+section.sec-listen.sec-p-y
+  .container-2
+    .sec-listen__title Listen
+    .sec-listen__subtitle Смотри <br/> и слушай
+    .sec-listen__list
+      +l-item('Сказка <br/> GoEng', './img/listen-1.png', 'https://www.youtube.com/watch?v=M3BGvJbaJCQ')
+      +l-item('Вводный <br/> урок', './img/listen-2.png', 'https://www.youtube.com/watch?v=M3BGvJbaJCQ')
+      +l-item('Как <br/> учатся', './img/listen-3.png', 'https://www.youtube.com/watch?v=M3BGvJbaJCQ')
+    

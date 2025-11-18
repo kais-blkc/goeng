@@ -1,0 +1,123 @@
+@use "../parts/variables" as v;
+
+.sec-banner {
+  --pad-top: 90px;
+  padding-top: var(--pad-top);
+  min-height: 100svh;
+  background: linear-gradient(
+    160deg,
+    transparent 60%,
+    color-mix(in srgb, var(--accent), transparent 75%),
+    color-mix(in srgb, var(--accent), transparent 45%)
+  );
+
+  @media (max-width: v.$screen-md) {
+    --pad-top: 150px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__text {
+    margin-top: -60px;
+    text-align: center;
+    padding: 36px 50px;
+    border-radius: 97px;
+    position: relative;
+    box-shadow: 0px 1px 20px
+      color-mix(in srgb, var(--accent-secondary), transparent 75%);
+    border: 4px solid transparent;
+    background:
+      linear-gradient(160deg, #fff 50%, #ffeded) padding-box /* inner bg */,
+      linear-gradient(90deg, #ffe5fb 30%, #ff1c1c 60%, #ffe5c5) border-box; /* gradient border */
+
+    animation-name: banner__text_bg;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    @media (max-width: v.$screen-lg) {
+      padding: 36px 20px;
+      margin-top: -20px;
+      h3 {
+        font-size: 44px;
+      }
+    }
+    @media (max-width: v.$screen-md) {
+      padding: 26px;
+      margin-top: 0px;
+    }
+    @media (max-width: 570px) {
+      h3 {
+        font-size: 28px;
+      }
+      span {
+        font-size: 16px;
+      }
+    }
+
+    h3 {
+      font-size: 49px;
+      font-weight: 400;
+    }
+    span {
+      font-size: 24px;
+      letter-spacing: 0.5px;
+      font-weight: 300;
+    }
+  }
+
+  &__preimg {
+    width: 350px;
+    max-width: 100%;
+    position: absolute;
+    left: -50px;
+    bottom: -50px;
+    @media (max-width: v.$screen-lg) {
+      width: 200px;
+      left: 0px;
+      bottom: -150px;
+    }
+    @media (max-width: v.$screen-md) {
+      width: 150px;
+      bottom: -130px;
+    }
+  }
+
+  &__btn {
+    margin-top: -25px;
+    z-index: 5;
+  }
+}
+
+@keyframes banner__text_bg {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 300%;
+    background-position: right;
+  }
+  100% {
+    background-size: 100%;
+  }
+}

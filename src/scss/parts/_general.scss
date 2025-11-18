@@ -1,0 +1,280 @@
+@use "variables" as v;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: "HelveticaNeue", sans-serif;
+  font-size: 16px;
+  background-color: #fefefe;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 1152px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.container-2 {
+  width: 986px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.sec-p {
+  &-y {
+    padding: var(--sec-p-y) 0;
+
+    &--top {
+      padding-top: var(--sec-p-y);
+    }
+
+    &--bottom {
+      padding-bottom: var(--sec-p-y);
+    }
+  }
+
+  &-x {
+    padding: 0 var(--sec-p-y);
+  }
+
+  @media (max-width: v.$screen-md) {
+    --sec-p-y: 40px;
+  }
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: var(--trans-02s);
+  display: inline-block;
+  padding: 13px 21px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-family: "HelveticaNeue", sans-serif;
+
+  &-reset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  &-accent {
+    @extend .btn;
+    font-size: 24px;
+    color: var(--c-white);
+    background: linear-gradient(90deg, #ff4c4c 0%, #ff1c1c 100%);
+
+    &:hover {
+      transform: scale(1.03);
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: v.$screen-md) {
+      font-size: 18px;
+    }
+  }
+
+  &-accent-2 {
+    @extend .btn;
+    font-size: 24px;
+    color: var(--c-white);
+    background: linear-gradient(90deg, #ffe5fb 0%, #ff1c1c 61%, #ffe5c5 100%);
+
+    &:hover {
+      transform: scale(1.03);
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: v.$screen-md) {
+      font-size: 18px;
+    }
+  }
+}
+
+.df {
+  display: flex;
+  align-items: center;
+
+  &.col {
+    flex-direction: column;
+  }
+
+  &.col-rev {
+    flex-direction: column-reverse;
+  }
+
+  &.gap {
+    &-5 {
+      gap: 5px;
+    }
+    &-10 {
+      gap: 10px;
+    }
+    &-15 {
+      gap: 15px;
+    }
+    &-20 {
+      gap: 20px;
+    }
+  }
+}
+
+.x-btn {
+  --size: 36px;
+  display: inline-grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #333;
+
+  &:hover {
+    color: #000;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  &:focus {
+    outline: 3px solid rgba(20, 120, 255, 0.2);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background: currentColor;
+    left: 20%;
+    top: 50%;
+    transform-origin: center;
+  }
+  &::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+.burger {
+  --size: 28px;
+  --bar-height: 2px;
+  --bar-color: #333;
+
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: var(--trans-02s);
+
+  span {
+    display: block;
+    width: 100%;
+    height: var(--bar-height);
+    background-color: var(--bar-color);
+    border-radius: 4px;
+  }
+
+  &:hover {
+    gap: 8px;
+  }
+}
+
+$breakpoints: (
+  "max-mob": "(max-width: #{v.$screen-md})",
+  "max-tablet": "(max-width: #{v.$screen-lg})",
+  "max-desk": "(min-width: #{v.$screen-xl})",
+  "min-mob": "(min-width: #{v.$screen-md})",
+  "min-tablet": "(min-width: #{v.$screen-lg})",
+  "min-desk": "(min-width: #{v.$screen-xl})",
+);
+
+.d {
+  &-none {
+    display: none;
+  }
+  &-block {
+    display: block;
+  }
+
+  @each $name, $query in $breakpoints {
+    &-none-#{$name} {
+      @media #{$query} {
+        display: none;
+      }
+    }
+    &-block-#{$name} {
+      @media #{$query} {
+        display: block;
+      }
+    }
+  }
+}
+
+.text-c {
+  &-accent {
+    color: var(--accent);
+  }
+}
+
+.radial-bg-accent {
+  background: radial-gradient(circle, #fcdbdb 50%, #fff, #ffffff 100%);
+}
+
+.img-cover {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

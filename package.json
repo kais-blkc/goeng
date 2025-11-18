@@ -1,0 +1,40 @@
+{
+  "name": "goeng",
+  "version": "1.0.0",
+  "description": "goeng layout",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "downPacks": "npm install --save-dev gulp gulp-clean browser-sync gulp-pug sass gulp-sass gulp-sourcemaps gulp-file-include gulp-group-css-media-queries gulp-autoprefixer gulp-ttf2woff2 gulp-ttf2woff gulp-fonter",
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "author": "kais",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^5.8.38",
+    "del": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify-es": "^3.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-ttf2woff": "^2.0.0",
+    "gulp-ttf2woff2": "^5.0.0",
+    "sass": "^1.94.0"
+  }
+}
