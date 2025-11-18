@@ -1,7 +1,7 @@
 mixin l-item(title, img, videoLink)
   a.sec-listen__item(href=videoLink, data-fancybox="listen")
     .sec-listen__item-img.img-cover
-      img(src=img, alt="")
+      img(src=img, alt="", loading="lazy")
     .sec-listen__item-title!=title
 
 section.sec-listen.sec-p-y
