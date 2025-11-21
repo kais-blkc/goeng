@@ -59,13 +59,6 @@
       padding-right: 100px;
     }
 
-    &:hover {
-      transform: translateY(-5px);
-      .sec-benefits__item-img {
-        transform: scale(1.05);
-      }
-    }
-
     &-header {
       display: flex;
       align-items: center;

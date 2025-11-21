@@ -1,0 +1,84 @@
+@use "../parts/variables" as v;
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: color-mix(in srgb, #000, transparent 50%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.modal-content {
+  position: relative;
+  width: 95%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 26px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+  @media (max-width: v.$screen-md) {
+    padding: 30px 15px;
+  }
+
+  .x-btn {
+    @media (max-width: v.$screen-md) {
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    @media (max-width: v.$screen-md) {
+      font-size: 26px;
+    }
+  }
+  &__subtitle {
+    margin-top: 10px;
+    font-size: 20px;
+    @media (max-width: v.$screen-md) {
+      font-size: 14px;
+    }
+  }
+}
+
+.modal-success {
+  .modal-content {
+    padding-bottom: 190px;
+  }
+  .modal-content__img {
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.modal-fform {
+  .sec-fform__form {
+    width: 100%;
+    padding: 0;
+    select,
+    input {
+      max-width: 100%;
+    }
+    &::before {
+      content: none;
+    }
+  }
+}

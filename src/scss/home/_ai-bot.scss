@@ -1,5 +1,15 @@
 @use "../parts/variables" as v;
 
+#ai-bot {
+  scroll-margin-top: -350px;
+  @media (max-width: 1140px) {
+    scroll-margin-top: -150px;
+  }
+  @media (max-width: v.$screen-lg) {
+    scroll-margin-top: -100px;
+  }
+}
+
 .sec-ai-bot {
   padding: 160px 0;
   position: relative;
@@ -151,6 +161,7 @@
       font-size: 18px;
     }
     &-btn {
+      display: block;
       position: absolute;
       bottom: -25px;
       z-index: 15;

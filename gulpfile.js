@@ -30,6 +30,7 @@ const paths = {
     favicon: `${project_folder}/`,
     php: `${project_folder}/php/`,
     audio: `${project_folder}/audio/`,
+    public: `${project_folder}/public/`,
   },
   src: {
     html: `${source_folder}/*.html`,
@@ -44,6 +45,7 @@ const paths = {
     favicon: `${source_folder}/favicons/**/*.{png,ico}`,
     php: `${source_folder}/php/*.php`,
     audio: `${source_folder}/audio/*.{mp3,ogg}`,
+    public: `${source_folder}/public/**/*`,
   },
   watch: {
     html: `${source_folder}/html/**/*.html`,
@@ -54,6 +56,7 @@ const paths = {
     favicon: `${source_folder}/favicons/**/*.{png,ico}`,
     php: `${source_folder}/php/*.php`,
     audio: `${source_folder}/audio/*.{mp3,ogg}`,
+    public: `${source_folder}/public/**/*`,
   },
   clean: project_folder,
 };
@@ -117,6 +120,12 @@ function copyAudio() {
   );
 }
 
+function copyPublic() {
+  return src(paths.src.public, { encoding: false }).pipe(
+    dest(paths.build.public),
+  );
+}
+
 function img() {
   return src(paths.src.img, { encoding: false }).pipe(dest(paths.build.img));
 }
@@ -151,6 +160,8 @@ function watchFiles() {
   watch(paths.watch.scss, scssF);
   watch(paths.watch.js, js);
   watch(paths.watch.img, img);
+  watch(paths.watch.public, copyPublic);
+  watch(paths.watch.php, php);
 }
 
 const build = series(
@@ -166,12 +177,23 @@ const build = series(
     php,
     fonts,
     copyAudio,
+    copyPublic,
   ),
 );
 
 const dev = series(build, parallel(browserSyncStart, watchFiles));
 
 export {
-  build, copyAudio, copyCSS,
-  copyJS, dev as default, favicon, fonts, img, otf2ttf, php, pugF
+  build,
+  copyAudio,
+  copyCSS,
+  copyJS,
+  copyPublic,
+  dev as default,
+  favicon,
+  fonts,
+  img,
+  otf2ttf,
+  php,
+  pugF
 };

@@ -1,12 +1,14 @@
 @use "../parts/variables" as v;
 
 .sec-fcards {
+  scroll-margin-top: -50px;
   padding-top: 80px;
   padding-bottom: 20px;
   text-align: center;
 
   @media (max-width: v.$screen-md) {
     padding-top: 40px;
+    scroll-margin-top: -20px;
   }
   @media (max-width: 500px) {
     padding-top: 20px;

@@ -16,18 +16,15 @@ header.header
           img(src="./img/logo-home.svg")
           span GoEng
 
-        a.header__link(href="#ftest") Тест на уровень
         a.header__link(href="#teachers") Преподаватели
+        a.header__link(href="#ftest") Тест на уровень
         a.header__link(href="#tarifs") Тарифы
-        a.header__link(href="#fcards") Бесплатно
-        a.header__link(href="#ai-bot") Учителям
-        a.header__sign(href="#").df.gap-5
-          .header__sign-icon
-          span Войти
+        a.header__link(href="#fcards") Карточки
+        a.header__link(href="#ai-bot") ИИнглишь
 
 
 
-  .header-mobile(data-modal-block="header-mobile")
+  .header-mobile.modal-wrapper(data-modal-block="header-mobile")
     .header-mobile__content
       .x-btn(data-modal-close="header-mobile")
 
@@ -36,12 +33,9 @@ header.header
           img(src="./img/logo-home.svg")
           span GoEng
 
-        a.header__link(href="#ftest") Тест на уровень
-        a.header__link(href="#teachers") Преподаватели
-        a.header__link(href="#tarifs") Тарифы
-        a.header__link(href="#fcards") Бесплатно
-        a.header__link(href="#ai-bot") Учителям
-        a.header__sign(href="#").df.gap-5
-          .header__sign-icon
-          span Войти
+        a.header__link(href="#teachers", data-modal-close="header-mobile") Преподаватели
+        a.header__link(href="#ftest", data-modal-close="header-mobile") Тест на уровень
+        a.header__link(href="#tarifs", data-modal-close="header-mobile") Тарифы
+        a.header__link(href="#fcards", data-modal-close="header-mobile") Карточки
+        a.header__link(href="#ai-bot", data-modal-close="header-mobile") ИИнглишь
 

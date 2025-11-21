@@ -1,14 +1,14 @@
 mixin l-item(title, img, videoLink)
-  a.sec-listen__item(href=videoLink, data-fancybox="listen")
+  a.sec-listen__item(href=videoLink)
     .sec-listen__item-img.img-cover
       img(src=img, alt="", loading="lazy")
     .sec-listen__item-title!=title
 
-section.sec-listen.sec-p-y
+section.sec-listen.sec-p-y(data-aos="fade-in" data-aos-offset="300")
   .container-2
     .sec-listen__title Listen
     .sec-listen__subtitle Смотри <br/> и слушай
-    .sec-listen__list
+    .sec-listen__list(data-fancybox="listen", data-aos="fade-up", data-aos-offset="300")
       +l-item('Сказка <br/> GoEng', './img/listen-1.png', 'https://www.youtube.com/watch?v=M3BGvJbaJCQ')
       +l-item('Вводный <br/> урок', './img/listen-2.png', 'https://www.youtube.com/watch?v=M3BGvJbaJCQ')
       +l-item('Как <br/> учатся', './img/listen-3.png', 'https://www.youtube.com/watch?v=M3BGvJbaJCQ')

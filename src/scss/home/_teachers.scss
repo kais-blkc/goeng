@@ -1,6 +1,15 @@
 @use "../parts/variables" as v;
 
 .sec-teachers {
+  scroll-margin-top: -170px;
+
+  @media (max-width: v.$screen-lg) {
+    scroll-margin-top: -140px;
+  }
+  @media (max-width: v.$screen-md) {
+    scroll-margin-top: -120px;
+  }
+
   &__title {
     font-size: 260px;
     text-align: center;

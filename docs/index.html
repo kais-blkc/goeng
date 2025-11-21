@@ -6,6 +6,7 @@
     <title>Basalt Code</title>
     <link rel="icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" href="./css/fancybox.css"/>
+    <link rel="stylesheet" href="./css/aos.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
   </head>
   <body>
@@ -13,15 +14,13 @@
       <div class="container">
         <div class="header__content"><a class="header__logo df gap-5 d-none-min-tablet" href="#"><img src="./img/logo-home.svg"/><span>GoEng</span></a>
           <button class="burger d-none-min-tablet" data-modal-open="header-mobile" aria-label="Открыть меню"><span></span><span></span><span></span></button>
-          <div class="header__navbar d-none-max-tablet"><a class="header__logo df gap-5" href="#"><img src="./img/logo-home.svg"/><span>GoEng</span></a><a class="header__link" href="#ftest">Тест на уровень</a><a class="header__link" href="#teachers">Преподаватели</a><a class="header__link" href="#tarifs">Тарифы</a><a class="header__link" href="#fcards">Бесплатно</a><a class="header__link" href="#ai-bot">Учителям</a><a class="header__sign df gap-5" href="#">
-              <div class="header__sign-icon"></div><span>Войти</span></a></div>
+          <div class="header__navbar d-none-max-tablet"><a class="header__logo df gap-5" href="#"><img src="./img/logo-home.svg"/><span>GoEng</span></a><a class="header__link" href="#teachers">Преподаватели</a><a class="header__link" href="#ftest">Тест на уровень</a><a class="header__link" href="#tarifs">Тарифы</a><a class="header__link" href="#fcards">Карточки</a><a class="header__link" href="#ai-bot">ИИнглишь</a></div>
         </div>
       </div>
-      <div class="header-mobile" data-modal-block="header-mobile">
+      <div class="header-mobile modal-wrapper" data-modal-block="header-mobile">
         <div class="header-mobile__content">
           <div class="x-btn" data-modal-close="header-mobile"></div>
-          <div class="header-mobile__navbar"> <a class="header__logo df gap-5" href="#"><img src="./img/logo-home.svg"/><span>GoEng</span></a><a class="header__link" href="#ftest">Тест на уровень</a><a class="header__link" href="#teachers">Преподаватели</a><a class="header__link" href="#tarifs">Тарифы</a><a class="header__link" href="#fcards">Бесплатно</a><a class="header__link" href="#ai-bot">Учителям</a><a class="header__sign df gap-5" href="#">
-              <div class="header__sign-icon"></div><span>Войти</span></a></div>
+          <div class="header-mobile__navbar"> <a class="header__logo df gap-5" href="#"><img src="./img/logo-home.svg"/><span>GoEng</span></a><a class="header__link" href="#teachers" data-modal-close="header-mobile">Преподаватели</a><a class="header__link" href="#ftest" data-modal-close="header-mobile">Тест на уровень</a><a class="header__link" href="#tarifs" data-modal-close="header-mobile">Тарифы</a><a class="header__link" href="#fcards" data-modal-close="header-mobile">Карточки</a><a class="header__link" href="#ai-bot" data-modal-close="header-mobile">ИИнглишь</a></div>
         </div>
       </div>
     </header>
@@ -39,11 +38,11 @@
         </div>
       </section>
       <div class="radial-bg-accent">
-        <section class="sec-teachers sec-p-y" id="teachers">
+        <section class="sec-teachers sec-p-y" id="teachers" data-aos="fade-in" data-aos-offset="300">
           <div class="sec-teachers__title">Учителя</div>
           <div class="container-2"> 
             <div class="sec-teachers__list"> 
-                      <div class="teachers-block">
+                      <div class="teachers-block" data-aos="fade-up" data-aos-offset="300">
                         <div class="teachers-block__img"><img src="./img/teach-1.png" alt="" loading="lazy"/></div>
                         <div class="teachers-block__body">
                           <div class="teachers-block__title">Адам</div>
@@ -74,7 +73,7 @@
                           <div class="teachers-block__audio-sub">прослушать аудио</div>
                         </div>
                       </div>
-                      <div class="teachers-block">
+                      <div class="teachers-block" data-aos="fade-up" data-aos-offset="300">
                         <div class="teachers-block__img"><img src="./img/teach-2.png" alt="" loading="lazy"/></div>
                         <div class="teachers-block__body">
                           <div class="teachers-block__title">Зарема</div>
@@ -105,7 +104,7 @@
                           <div class="teachers-block__audio-sub">прослушать аудио</div>
                         </div>
                       </div>
-                      <div class="teachers-block">
+                      <div class="teachers-block" data-aos="fade-up" data-aos-offset="300">
                         <div class="teachers-block__img"><img src="./img/teach-3.png" alt="" loading="lazy"/></div>
                         <div class="teachers-block__body">
                           <div class="teachers-block__title">Индира</div>
@@ -136,7 +135,7 @@
                           <div class="teachers-block__audio-sub">прослушать аудио</div>
                         </div>
                       </div>
-                      <div class="teachers-block">
+                      <div class="teachers-block" data-aos="fade-up" data-aos-offset="300">
                         <div class="teachers-block__img"><img src="./img/teach-4.png" alt="" loading="lazy"/></div>
                         <div class="teachers-block__body">
                           <div class="teachers-block__title">Арслан</div>
@@ -170,7 +169,7 @@
             </div>
           </div>
         </section>
-        <section class="sec-generate">
+        <section class="sec-generate" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="300">
           <div class="container-2">
             <div class="sec-generate__content">
               <div class="sec-generate__banner">
@@ -186,25 +185,24 @@
             </div>
           </div>
         </section>
-        <section class="sec-ftest sec-p-y" id="ftest">
+        <section class="sec-ftest sec-p-y" id="ftest" data-aos="fade-in" data-aos-offset="300">
           <div class="sec-ftest__container container-2">
             <div class="sec-ftest__title">Freeeeeee</div>
-            <div class="sec-ftest__content">
+            <div class="sec-ftest__content" data-aos="fade-up" data-aos-offset="300">
               <div class="sec-ftest__desc">
                 <p class="sec-ftest__text"><span class="text-c-accent">Бесплатный</span> <br/>  тест на уровень <br/> английского</p>
-                <p class="sec-ftest__subtext">Узнай свой уровень за 5 минут — <br/> дальше всё пойдёт по плану</p>
-                <button class="btn btn-accent sec-ftest__btn">Пройти тест бесплатно</button>
+                <p class="sec-ftest__subtext">Узнай свой уровень за 5 минут — <br/> дальше всё пойдёт по плану</p><a class="btn btn-accent sec-ftest__btn" href="https://t.me/goengtest_bot" target="_blank">Пройти тест бесплатно</a>
               </div>
               <div class="sec-ftest__img"><img src="./img/ftest-img.png" alt="" loading="lazy"/></div>
             </div>
           </div>
         </section>
       </div>
-      <section class="sec-tarifs" id="tarifs">
+      <section class="sec-tarifs" id="tarifs" data-aos="fade-in" data-aos-offset="300">
         <div class="container-2">
           <div class="sec-tarifs__title">Выбери свой курс</div>
-          <div class="sec-tarifs__list">
-                  <div class="sec-tarifs__item undefined">
+          <div class="sec-tarifs__list" data-aos="fade-up" data-aos-offset="300" data-aos-anchor-placement="top-bottom">
+                  <div class="sec-tarifs__item undefined" data-tarif="business">
                     <div class="sec-tarifs__item-body">
                       <div class="sec-tarifs__item-tags"> 
                         <p>business</p><span>group</span>
@@ -219,7 +217,7 @@
                     </div>
                     <div class="sec-tarifs__item-price"><span>990 &#8381;/</span>урок</div>
                   </div>
-                  <div class="sec-tarifs__item talking">
+                  <div class="sec-tarifs__item talking" data-tarif="talking">
                     <div class="sec-tarifs__item-body">
                       <div class="sec-tarifs__item-tags"> 
                         <p>talking</p><span>group</span>
@@ -234,7 +232,7 @@
                     </div>
                     <div class="sec-tarifs__item-price"><span>1190 &#8381;/</span>урок</div>
                   </div>
-                  <div class="sec-tarifs__item levelup">
+                  <div class="sec-tarifs__item levelup" data-tarif="level up">
                     <div class="sec-tarifs__item-body">
                       <div class="sec-tarifs__item-tags"> 
                         <p>level up</p><span>group</span>
@@ -249,7 +247,7 @@
                     </div>
                     <div class="sec-tarifs__item-price"><span>695 &#8381;/</span>урок</div>
                   </div>
-                  <div class="sec-tarifs__item pro">
+                  <div class="sec-tarifs__item pro" data-tarif="Pro">
                     <div class="sec-tarifs__item-body">
                       <div class="sec-tarifs__item-tags"> 
                         <p>Pro</p><span>group</span>
@@ -268,24 +266,24 @@
         </div>
         <div class="sec-benefits"> 
           <div class="container-2">
-            <div class="sec-benefits__content">
+            <div class="sec-benefits__content" data-aos="fade-right">
               <div class="sec-benefits__banner">Сертификат по <br/> завершении курса</div>
               <div class="sec-benefits__list">
-                        <div class="sec-benefits__item">
+                        <div class="sec-benefits__item" data-aos="fade-left">
                           <div class="sec-benefits__item-header">
                             <div class="sec-benefits__item-title">2000+</div>
                             <div class="sec-benefits__item-subtitle">учеников <br/> прошли курс</div>
                           </div>
                           <div class="sec-benefits__item-img"><img src="./img/benefits-1.png" alt=""/></div>
                         </div>
-                        <div class="sec-benefits__item">
+                        <div class="sec-benefits__item" data-aos="fade-left">
                           <div class="sec-benefits__item-header">
                             <div class="sec-benefits__item-title">100%</div>
                             <div class="sec-benefits__item-subtitle">гарантия или <br/> вернём деньги</div>
                           </div>
                           <div class="sec-benefits__item-img"><img src="./img/benefits-2.png" alt=""/></div>
                         </div>
-                        <div class="sec-benefits__item">
+                        <div class="sec-benefits__item" data-aos="fade-left">
                           <div class="sec-benefits__item-header">
                             <div class="sec-benefits__item-title">8+</div>
                             <div class="sec-benefits__item-subtitle">лет опыта работы <br/> в Хасавюрте</div>
@@ -297,33 +295,32 @@
           </div>
         </div>
       </section>
-      <section class="sec-listen sec-p-y">
+      <section class="sec-listen sec-p-y" data-aos="fade-in" data-aos-offset="300">
         <div class="container-2">
           <div class="sec-listen__title">Listen</div>
           <div class="sec-listen__subtitle">Смотри <br/> и слушай</div>
-          <div class="sec-listen__list"><a class="sec-listen__item" href="https://www.youtube.com/watch?v=M3BGvJbaJCQ" data-fancybox="listen">
+          <div class="sec-listen__list" data-fancybox="listen" data-aos="fade-up" data-aos-offset="300"><a class="sec-listen__item" href="https://www.youtube.com/watch?v=M3BGvJbaJCQ">
                     <div class="sec-listen__item-img img-cover"><img src="./img/listen-1.png" alt="" loading="lazy"/></div>
-                    <div class="sec-listen__item-title">Сказка <br/> GoEng</div></a><a class="sec-listen__item" href="https://www.youtube.com/watch?v=M3BGvJbaJCQ" data-fancybox="listen">
+                    <div class="sec-listen__item-title">Сказка <br/> GoEng</div></a><a class="sec-listen__item" href="https://www.youtube.com/watch?v=M3BGvJbaJCQ">
                     <div class="sec-listen__item-img img-cover"><img src="./img/listen-2.png" alt="" loading="lazy"/></div>
-                    <div class="sec-listen__item-title">Вводный <br/> урок</div></a><a class="sec-listen__item" href="https://www.youtube.com/watch?v=M3BGvJbaJCQ" data-fancybox="listen">
+                    <div class="sec-listen__item-title">Вводный <br/> урок</div></a><a class="sec-listen__item" href="https://www.youtube.com/watch?v=M3BGvJbaJCQ">
                     <div class="sec-listen__item-img img-cover"><img src="./img/listen-3.png" alt="" loading="lazy"/></div>
                     <div class="sec-listen__item-title">Как <br/> учатся</div></a>
           </div>
         </div>
       </section>
-      <section class="sec-fcards" id="fcards">
+      <section class="sec-fcards" id="fcards" data-aos="fade-up" data-aos-offset="300">
         <div class="container-2">
           <div class="sec-fcards__content">
             <div class="sec-fcards__img"><img class="d-none-max-mob" src="./img/fcards-img.png" alt="" loading="lazy"/><img class="d-none-min-mob" src="./img/fcards-img-mobile.png" alt="" loading="lazy"/></div>
             <div class="sec-fcards__title">Бесплатно <br/> 26 карточек с фразами</div>
-            <div class="sec-fcards__text">Каждая карточка — это реальная фраза, которую используют носители каждый день. Без скучной грамматики, без учебников из прошлого века. <br/> Только живой язык</div>
-            <button class="sec-fcards__btn btn-accent">Получить</button>
+            <div class="sec-fcards__text">Каждая карточка — это реальная фраза, которую используют носители каждый день. Без скучной грамматики, без учебников из прошлого века. <br/> Только живой язык</div><a class="sec-fcards__btn btn-accent" href="./public/pdf/goeng_fcards_a1.pdf" download="Фразы Goend A1.pdf">Получить</a>
           </div>
         </div>
       </section>
-      <section id="ai-bot">
+      <section id="ai-bot" data-aos="fade-in" data-aos-offset="300">
         <div class="sec-ai-bot">
-          <div class="sec-ai-bot__bgblocks">
+          <div class="sec-ai-bot__bgblocks" data-aos="zoom-in" data-aos-offset="500">
             <div class="sec-ai-bot__bgblock"></div>
             <div class="sec-ai-bot__bgblock"></div>
             <div class="sec-ai-bot__bgblock"></div>
@@ -331,29 +328,69 @@
               <div class="sec-ai-bot__bgblock-inner">
                 <div class="sec-ai-bot__bgblock-title">ИИнглиш</div>
                 <div class="sec-ai-bot__bgblock-subtitle">Улучшайте английский с нашим ИИ ботом</div>
-                <div class="sec-ai-bot__bgblock-subtitle-2">Живое, дружелюбное общение под ваш уровень английского</div>
-                <button class="sec-ai-bot__bgblock-btn btn-accent-2">ПрисоедИИниться</button>
+                <div class="sec-ai-bot__bgblock-subtitle-2">Живое, дружелюбное общение под ваш уровень английского</div><a class="sec-ai-bot__bgblock-btn btn-accent-2" href="https://t.me/goengtest_bot" target="_blank">ПрисоедИИниться</a>
               </div>
             </div>
           </div>
         </div>
         <div class="sec-fform">
           <div class="container-2">
-            <div class="sec-fform__title">Неделя бесплатных <br/> занятий, если записаться <br/> прямо сейчас</div>
-            <form class="sec-fform__form">
-              <input type="text" placeholder="Имя"/>
-              <input type="text" placeholder="Номер" data-imask="data-imask"/>
+            <div class="sec-fform__title" data-aos="fade-in" data-aos-offset="300">Неделя бесплатных <br/> занятий, если записаться <br/> прямо сейчас</div>
+            <form class="sec-fform__form" data-aos="fade-up" data-aos-offset="500">
+              <input type="text" name="username" placeholder="Имя" required="required"/>
+              <input type="text" name="phone" placeholder="Номер" data-imask="data-imask" required="required"/>
               <div class="sec-fform__agree">__ Даю согласие на <a href="#">обработку персональных данных </a></div>
               <div class="sec-fform__agree">__ Соглашаюсь на <a href="#">получение рекламы</a> </div>
-              <button class="sec-fform__btn btn-accent" type="button">Отправить заявку</button>
+              <button class="sec-fform__btn btn-accent" type="submit">Отправить заявку</button>
             </form>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="footer__navbar"><a class="footer__logo df gap-5" href="#"><img src="./img/logo-home.svg"/><span>GoEng</span></a><a class="footer__link" href="#teachers">Преподаватели</a><a class="footer__link" href="#ftest">Тест на уровень</a><a class="footer__link" href="#tarifs">Тарифы</a><a class="footer__link" href="#fcards">Карточки</a><a class="footer__link" href="#ai-bot">ИИнглишь</a></div>
+        <div class="footer__copyright">© 2025 GoEng</div>
+      </div>
+    </footer>
+    <div class="modal-success modal-wrapper" data-modal-block="form-success">
+      <div class="modal-content">
+        <div class="x-btn" data-modal-close="form-success"></div>
+        <div class="modal-content__title">Супер!</div>
+        <div class="modal-content__subtitle">Скоро свяжемся с вами</div>
+        <div class="modal-content__img"> <img src="img/success-form.png" alt="success"/></div>
+      </div>
+    </div>
+    <div class="modal-fail modal-wrapper" data-modal-block="form-fail">
+      <div class="modal-content">
+        <div class="x-btn" data-modal-close="form-fail"></div>
+        <div class="modal-content__title">Упс!</div>
+        <div class="modal-content__subtitle">Что-то пошло не так</div>
+      </div>
+    </div>
+    <div class="modal-fform modal-wrapper" data-modal-block="form-tarifs">
+      <div class="modal-content">
+        <div class="x-btn" data-modal-close="form-tarifs"></div>
+        <div class="modal-content__title">Запишись на курс!</div>
+        <div class="modal-content__subtitle">Отправь заявку, и мы свяжемся с тобой</div>
+        <form class="sec-fform__form">
+          <input type="text" name="username" placeholder="Имя" required="required"/>
+          <input type="text" name="phone" placeholder="Номер" data-imask="data-imask" required="required"/>
+          <select name="tarif" required="required">
+            <option value="business">Мужская бизнес-группа</option>
+            <option value="talking">Женская разговорная группа</option>
+            <option value="level up">Уроки для подростков 12-17 лет</option>
+            <option value="pro">Premium уроки от профи 25-35 лет</option>
+          </select>
+          <div class="sec-fform__agree">__ Даю согласие на <a href="#">обработку персональных данных </a></div>
+          <div class="sec-fform__agree">__ Соглашаюсь на <a href="#">получение рекламы</a> </div>
+          <button class="sec-fform__btn btn-accent" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/fancybox.umd.js"></script>
     <script src="./js/imask.js"></script>
+    <script src="./js/aos.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

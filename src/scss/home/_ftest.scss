@@ -1,6 +1,10 @@
 @use "../parts/variables" as v;
 
 .sec-ftest {
+  scroll-margin-top: -140px;
+  @media (max-width: v.$screen-lg) {
+    scroll-margin-top: -110px;
+  }
   @media (max-width: v.$screen-md) {
     margin-top: -20px;
   }
@@ -14,7 +18,6 @@
     font-size: 216px;
     font-weight: 600;
     color: #fff;
-    // text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 
     @media (max-width: 1170px) {
       font-size: 180px;
@@ -98,6 +101,12 @@
     box-shadow: -15px 8px 36px
       color-mix(in srgb, var(--accent-secondary), transparent 66%);
 
+    animation-name: ftest__img;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
     @media (max-width: v.$screen-lg) {
       width: 100%;
       max-width: 560px;
@@ -113,5 +122,31 @@
 
   &__btn {
     font-size: 18px;
+  }
+}
+
+@keyframes ftest__img {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, 5px);
+  }
+}
+@keyframes ftest__img_2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(0px, -5px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  75% {
+    transform: translate(5px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }

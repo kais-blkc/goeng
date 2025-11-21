@@ -86,22 +86,23 @@
       visibility: visible;
 
       .header-mobile__content {
-        top: 0;
+        top: 12px;
+        max-height: 100vh;
       }
     }
 
     &__content {
       position: absolute;
-      right: 0;
-      top: -100px;
+      top: 18px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      padding: 60px 20px;
-      height: auto;
+      padding: 20px 20px;
+      max-height: 50px;
       width: 100%;
+      max-width: 95%;
       background-color: var(--gray-bg);
-      border-radius: 0 0 16px 16px;
+      border-radius: 16px;
       transition: var(--trans-03s);
     }
 

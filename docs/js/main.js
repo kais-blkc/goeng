@@ -2,6 +2,13 @@
 Fancybox.bind("[data-fancybox]", {});
 /* ========== END FANCYBOX ========== */
 
+/* ========== AOS ========== */
+AOS.init({
+  startEvent: "DOMContentLoaded",
+  duration: 500,
+});
+/* ========== END AOS ========== */
+
 /* ========== IMASK ========== */
 const element = document.querySelector("*[data-imask]");
 const maskOptions = {
@@ -15,7 +22,6 @@ function modal() {
   let btnOpenModal = document.querySelectorAll("*[data-modal-open]");
   const btnCloseModal = document.querySelectorAll("*[data-modal-close]");
   const btnBlockModal = document.querySelectorAll("*[data-modal-block]");
-  const modals = document.querySelectorAll(".modal-wrapper");
 
   btnOpenModal.forEach((btn) => {
     btn.addEventListener("click", toggleModalClass);
@@ -24,13 +30,14 @@ function modal() {
     btn.addEventListener("click", toggleModalClass);
   });
 
-  modals.forEach((modal) => {
-    modal.addEventListener("click", (e) => {
-      console.log(e.target.className);
-      if (e.target.className.includes("modal-wrapper")) {
-        modal.classList.remove("active");
-      }
-    });
+  document.addEventListener("click", (e) => {
+    const modal = e.target.classList.contains("modal-wrapper")
+      ? e.target
+      : null;
+
+    if (modal) {
+      modal?.classList.remove("active");
+    }
   });
 
   function toggleModalClass() {
@@ -78,3 +85,80 @@ function playAudio() {
 }
 playAudio();
 /* ========== END PLAY AUDIO ========== */
+
+/* ========== SELECT TARIF ========== */
+function selectTarif() {
+  const tarifs = document.querySelectorAll("*[data-tarif]");
+
+  document.addEventListener("click", (e) => {
+    const tarif = e.target.closest("*[data-tarif]");
+    if (!tarif) return;
+
+    const tarifModal = document.querySelector(
+      "*[data-modal-block='form-tarifs']",
+    );
+    tarifModal.classList.add("active");
+
+    const select = tarifModal.querySelector("select[name='tarif']");
+    const tarifName = tarif.dataset.tarif?.toLowerCase();
+    select.value = tarifName;
+  });
+}
+selectTarif();
+/* ========== END SELECT TARIF ========== */
+
+/* ========== SEND FORM ========== */
+function sendForm() {
+  const forms = document.querySelectorAll("form");
+
+  forms.forEach((form) => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const object = {};
+
+      formData.forEach((value, key) => {
+        object[key] = value;
+      });
+      console.log(object);
+
+      fetch("php/mail.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((res) => {
+          if (res.ok) {
+            openModalSuccess(form);
+          } else {
+            openModalFail(form);
+          }
+        })
+        .catch(() => {
+          openModalFail(form);
+        });
+    });
+  });
+}
+sendForm();
+/* ========== END SEND FORM ========== */
+
+function openModalSuccess(node) {
+  const curModal = node.closest("*[data-modal-block]");
+  curModal?.classList?.remove("active");
+
+  const successModal = document.querySelector(
+    "*[data-modal-block='form-success']",
+  );
+  successModal.classList.add("active");
+}
+function openModalFail(node) {
+  const curModal = node.closest("*[data-modal-block]");
+  curModal?.classList?.remove("active");
+
+  const successModal = document.querySelector(
+    "*[data-modal-block='form-fail']",
+  );
+  successModal.classList.add("active");
+}

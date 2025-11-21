@@ -56,7 +56,7 @@
     animation-direction: alternate;
 
     @media (max-width: v.$screen-lg) {
-      padding: 36px 20px;
+      padding: 36px 20px 36px;
       margin-top: -20px;
       h3 {
         font-size: 44px;
@@ -78,6 +78,7 @@
     h3 {
       font-size: 49px;
       font-weight: 400;
+      margin-top: -10px;
     }
     span {
       font-size: 24px;

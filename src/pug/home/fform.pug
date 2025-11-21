@@ -1,9 +1,9 @@
 .sec-fform
   .container-2
-    .sec-fform__title Неделя бесплатных <br/> занятий, если записаться <br/> прямо сейчас
-    form.sec-fform__form
-      input(type="text" placeholder="Имя")
-      input(type="text" placeholder="Номер" data-imask)
+    .sec-fform__title(data-aos="fade-in" data-aos-offset="300") Неделя бесплатных <br/> занятий, если записаться <br/> прямо сейчас
+    form.sec-fform__form(data-aos="fade-up" data-aos-offset="500")
+      input(type="text" name="username" placeholder="Имя" required)
+      input(type="text" name="phone" placeholder="Номер" data-imask required)
       .sec-fform__agree __ Даю согласие на #[a(href="#") обработку персональных данных ]
       .sec-fform__agree __ Соглашаюсь на #[a(href="#") получение рекламы] 
-      button(type="button").sec-fform__btn.btn-accent Отправить заявку
+      button(type="submit").sec-fform__btn.btn-accent Отправить заявку

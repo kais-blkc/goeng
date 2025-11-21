@@ -1,5 +1,5 @@
 mixin lb-item(title, subtitle, img)
-  .sec-benefits__item
+  .sec-benefits__item(data-aos="fade-left")
     .sec-benefits__item-header
       .sec-benefits__item-title!=title
       .sec-benefits__item-subtitle!=subtitle
@@ -8,7 +8,7 @@ mixin lb-item(title, subtitle, img)
 
 .sec-benefits 
   .container-2
-    .sec-benefits__content
+    .sec-benefits__content(data-aos="fade-right")
       .sec-benefits__banner Сертификат по <br/> завершении курса
 
       .sec-benefits__list

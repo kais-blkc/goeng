@@ -1,10 +1,54 @@
 @use "../parts/variables" as v;
 
 footer {
-  height: 350px;
+  min-height: 250px;
   width: 100%;
   background: var(--accent);
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+
   @media (max-width: v.$screen-md) {
-    height: 200px;
+    min-height: 200px;
+  }
+}
+
+.footer {
+  color: #fff;
+  text-decoration: none;
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: var(--trans-02s);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+
+    @media (max-width: v.$screen-md) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    margin-top: auto;
   }
 }
