@@ -97,6 +97,7 @@ img {
     &:hover {
       transform: scale(1.03);
     }
+
     &:active {
       transform: scale(0.98);
     }
@@ -115,6 +116,7 @@ img {
     &:hover {
       transform: scale(1.03);
     }
+
     &:active {
       transform: scale(0.98);
     }
@@ -141,12 +143,15 @@ img {
     &-5 {
       gap: 5px;
     }
+
     &-10 {
       gap: 10px;
     }
+
     &-15 {
       gap: 15px;
     }
+
     &-20 {
       gap: 20px;
     }
@@ -191,9 +196,11 @@ img {
     top: 50%;
     transform-origin: center;
   }
+
   &::before {
     transform: translateY(-50%) rotate(45deg);
   }
+
   &::after {
     transform: translateY(-50%) rotate(-45deg);
   }
@@ -244,6 +251,7 @@ $breakpoints: (
   &-none {
     display: none;
   }
+
   &-block {
     display: block;
   }
@@ -254,6 +262,7 @@ $breakpoints: (
         display: none;
       }
     }
+
     &-block-#{$name} {
       @media #{$query} {
         display: block;
@@ -263,8 +272,20 @@ $breakpoints: (
 }
 
 .text-c {
+  &-black {
+    color: var(--c-black);
+  }
+
   &-accent {
     color: var(--accent);
+  }
+
+  &-secondary {
+    color: var(--c-secondary);
+  }
+
+  &-secondary-gray {
+    color: #979797;
   }
 }
 

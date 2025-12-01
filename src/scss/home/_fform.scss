@@ -35,6 +35,7 @@
 
   &__title {
     font-size: 38px;
+
     @media (max-width: v.$screen-md) {
       font-size: 26px;
     }
@@ -52,6 +53,7 @@
     flex-direction: column;
     border-radius: 44px;
     position: relative;
+
     @media (max-width: v.$screen-md) {
       &::before {
         left: 95px;
@@ -71,6 +73,10 @@
       top: 50px;
     }
 
+    select {
+      cursor: pointer;
+    }
+
     select,
     input {
       width: 100%;
@@ -82,12 +88,20 @@
       border-radius: 16px;
       background: #fffdfd;
       text-align: center;
+      text-align-last: center;
       margin-bottom: 10px;
       outline: none;
       transition: var(--trans-03s);
+      -webkit-appearance: none;
+      /* For Chrome, Safari, Edge, Opera */
+      -moz-appearance: none;
+      /* For Firefox */
+      appearance: none;
+
       &::placeholder {
         color: #e2cccc;
       }
+
       &:focus {
         border-color: var(--accent);
       }
@@ -109,7 +123,7 @@
   }
 
   &__btn {
-    margin-top: 26px;
+    margin-top: 16px;
     width: 100%;
   }
 }

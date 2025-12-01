@@ -6,6 +6,7 @@ Fancybox.bind("[data-fancybox]", {});
 AOS.init({
   startEvent: "DOMContentLoaded",
   duration: 500,
+  once: true,
 });
 /* ========== END AOS ========== */
 
