@@ -1,6 +1,6 @@
 mixin l-item(title, img, videoLink, isDownload=false)
   if isDownload
-    a(class=`sec-listen__item ${isDownload ? 'download' : ''}` href="./public/book.pdf" target="_blank" download="А1 Book GoEng Battle with the Laty Monster Procratinator")
+    a(class=`sec-listen__item ${isDownload ? 'download' : ''}` href=videoLink target="_blank" download="А1 Book GoEng Battle with the Laty Monster Procratinator.pdf")
       .sec-listen__item-img.img-cover
         img(src=img, alt="", loading="lazy")
       .sec-listen__item-title!=title
@@ -15,7 +15,7 @@ section#listens.sec-listen.sec-p-y(data-aos="fade-in" data-aos-offset="300")
     .sec-listen__title Listen
     .sec-listen__subtitle Смотри <br/> и слушай
     .sec-listen__list(data-aos="fade-up", data-aos-offset="300")
-      +l-item('Сказка <br/> GoEng', './img/listen-1.png', 'https://www.youtube.com/watch?v=M3BGvJbaJCQ', true)
+      +l-item('Сказка <br/> GoEng', './img/listen-1.png', '/public/pdf/book.pdf', true)
       +l-item('Вводный <br/> урок', './img/listen-2.png', 'https://www.youtube.com/watch?v=M3BGvJbaJCQ')
       +l-item('Как <br/> учатся', './img/listen-3.png', 'https://www.youtube.com/watch?v=M3BGvJbaJCQ')
     

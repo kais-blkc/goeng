@@ -6,15 +6,16 @@ mixin teacher-block(img, title, subtitle, audio, audioSub)
       .teachers-block__title!= title
       .teachers-block__subtitle!= subtitle
 
-      .teachers-block__audio(data-audio)
-        button.teachers-block__audio-play.btn-reset(data-audio-btn)
-          img(src="./img/play-btn.svg", alt="" loading="lazy").play
-          img(src="./img/pause-btn.svg", alt="" loading="lazy").pause
-        .audio-wave
-          - for (let i = 1; i <= 17; i++)
-            .wave-bar
-        audio(src= audio, data-audio-track)
+      if audio
+        .teachers-block__audio(data-audio)
+          button.teachers-block__audio-play.btn-reset(data-audio-btn)
+            img(src="./img/play-btn.svg", alt="" loading="lazy").play
+            img(src="./img/pause-btn.svg", alt="" loading="lazy").pause
+          .audio-wave
+            - for (let i = 1; i <= 17; i++)
+              .wave-bar
+          audio(src= audio, data-audio-track)
 
 
-      .teachers-block__audio-sub!= audioSub
+        .teachers-block__audio-sub!= audioSub
 
