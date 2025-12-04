@@ -1,7 +1,12 @@
 section#fcards.sec-fcards(data-aos="fade-up" data-aos-offset="300")
   .container-2
     .sec-fcards__content
-      .sec-fcards__img
+      .sec-fcards__list
+        - for (let i = 1; i <= 7; i++)
+          .sec-fcards__item
+            img(src=`./img/fcards-${i}.png`, alt="", loading="lazy" )
+
+      //-.sec-fcards__img
         img(src="./img/fcards-img.png", alt="", loading="lazy" ).d-none-max-mob
         img(src="./img/fcards-img-mobile.png", alt="", loading="lazy" ).d-none-min-mob
 

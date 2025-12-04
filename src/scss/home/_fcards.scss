@@ -10,6 +10,7 @@
     padding-top: 40px;
     scroll-margin-top: -20px;
   }
+
   @media (max-width: 500px) {
     padding-top: 20px;
   }
@@ -23,6 +24,7 @@
   &__title {
     font-size: 34px;
     line-height: 100%;
+
     @media (max-width: 500px) {
       font-size: 26px;
     }
@@ -39,5 +41,62 @@
     font-size: 20px;
     margin-top: 15px;
     width: 174px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 150px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media (max-width: v.$screen-lg) {
+      flex-wrap: wrap;
+      margin-top: 50px;
+      padding-left: 0;
+    }
+
+    @media (max-width: v.$screen-md) {
+    }
+  }
+
+  &__item {
+    margin-left: -150px;
+    max-width: 280px;
+    transition: var(--trans-03s);
+    z-index: 10;
+
+    &:hover {
+      z-index: 10;
+      transform: translate(-35px, -50px);
+    }
+
+    @media (max-width: v.$screen-lg) {
+      flex: 0 0 25%;
+      margin-left: 0px;
+      transform: scale(1.5);
+
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        margin-top: -90px;
+      }
+
+      &:hover {
+        transform: translate(-5%, -20%) scale(1.5);
+      }
+    }
+
+    @media (max-width: v.$screen-md) {
+      flex: 0 0 25%;
+      max-width: 100%;
+
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        margin-top: -30px;
+      }
+    }
   }
 }

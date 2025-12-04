@@ -39,18 +39,21 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: start;
-
-    @media (max-width: v.$screen-lg) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 50px;
-    }
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 37px;
 
     @media (max-width: v.$screen-md) {
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      & > *:nth-child(odd):last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
+
+      gap: 10px;
     }
   }
 }
